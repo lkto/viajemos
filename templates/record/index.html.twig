@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block title %}History{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+    <div class="row content">
+        <h3>History of queries </h3>
+
+        <div class="col-12">
+            <table id="data-table">
+                <thead>
+                <tr>
+                    <th>Ciudad</th>
+                    <th>Pais</th>
+                    <th>Humedad</th>
+                    <th>Fecha</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.city }}</td>
+                        <td>{{ item.city.county }}</td>
+                        <td>{{ item.humidity }}%</td>
+                        <td>{{ item.updatedAt|date }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

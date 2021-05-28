@@ -1,0 +1,18 @@
+{% block header %}
+    <header>
+        <div class="header">
+            <div class="header-image">
+                <a href="" class="logo_menu">
+                    <img src="{{ asset('images/viajemos.png') }}" class="img-fluid" width="200" height="40"/>
+                </a>
+            </div>
+            <nav class="header-menu">
+                <ul>
+                    <li><a href="{{ path('map') }}">Map</a></li>
+                    <li><a href="{{ path('record-index') }}">History</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+{% endblock %}
